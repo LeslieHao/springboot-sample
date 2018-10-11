@@ -2,8 +2,6 @@ package com.hh.springbootredis.redis;
 
 import java.util.List;
 
-import com.google.common.collect.Lists;
-
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
@@ -26,7 +24,9 @@ public class RedisUtil {
         jedisPool = new JedisPool("127.0.0.1", 6379);
         jedis = jedisPool.getResource();
     }
-
+    public static Jedis getJedis() {
+        return jedisPool.getResource();
+    }
 
     public static void set(String key, String value) {
         jedis.set(key, value);
@@ -83,7 +83,6 @@ public class RedisUtil {
 
     public static void watch() {
 //        jedis.watch()
-
     }
 
 
