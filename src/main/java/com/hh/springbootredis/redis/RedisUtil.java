@@ -117,7 +117,7 @@ public class RedisUtil {
 
     public static void main(String[] args) {
 //        jedis.set("count", "0");
-        incr("test");
+//        incr("test");
         System.out.println(jedis.get("count"));
     }
 }
