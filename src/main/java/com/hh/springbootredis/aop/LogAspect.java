@@ -1,11 +1,11 @@
 package com.hh.springbootredis.aop;
 
-import java.lang.reflect.Method;
-
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
+
+import java.lang.reflect.Method;
 
 /**
  * @author HaoHao
@@ -24,6 +24,7 @@ public class LogAspect {
      * 最后一个.. 代表所有参数v
      */
     @Pointcut("execution(* com.hh.springbootredis.controller..*.*(..))")
+//    @Pointcut("@annotation(com.yeepay.g3.jrhz.cashier.aop.RsaDecrypt)")
     public void controllerAspectj() {
     }
 
