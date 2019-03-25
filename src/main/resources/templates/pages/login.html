@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>SpringBootTest</title>
+    <script src="/js/jquery-3.2.1.min.js"></script>
+</head>
+
+
+<script type="text/javascript">
+  $(function () {
+    $.ajax({
+      url: 'getData',
+      success: function (res) {
+        var arr = [];
+        arr = res.data;
+        $.each(arr, function (n, value) {
+          $("#ul").append("<li>"+value+"</li>")
+        });
+
+      }, error: function () {
+
+      }
+    });
+
+    $.ajax({
+      url: 'getAnimal',
+      success: function (res) {
+        var arr = [];
+        arr = res.data;
+        $.each(arr, function (n, value) {
+          $("#ul-animals").append("<li>I am a "+value.type+",  I can "+value.skill+"</li>")
+        });
+      }, error: function () {
+
+      }
+    });
+  })
+</script>
+<body>
+<label>PopStar</label>
+<ul id="ul">
+</ul>
+<label>Animals</label>
+<ul id="ul-animals">
+</ul>
+
+</body>
+</html>

@@ -8,7 +8,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>springboot-redis</name>
+	<name>springboot-sample</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
@@ -56,13 +56,6 @@
 			<optional>true</optional>
 		</dependency>
 
-		<!-- fastJson -->
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>fastjson</artifactId>
-			<version>1.2.47</version>
-		</dependency>
-
 		<!-- aspectj -->
 		<dependency>
 			<groupId>org.aspectj</groupId>
@@ -88,6 +81,19 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.56</version>
 		</dependency>
 	</dependencies>
 
