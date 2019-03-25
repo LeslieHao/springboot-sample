@@ -1,6 +1,6 @@
 package com.hh.springboot.redis.semaphore;
 
-import com.hh.springboot.redis.redis.RedisUtil;
+import com.hh.springboot.redis.RedisUtil;
 
 import redis.clients.jedis.Jedis;
 

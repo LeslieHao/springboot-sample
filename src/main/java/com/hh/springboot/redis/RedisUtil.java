@@ -1,4 +1,4 @@
-package com.hh.springboot.redis.redis;
+package com.hh.springboot.redis;
 
 import java.util.List;
 
