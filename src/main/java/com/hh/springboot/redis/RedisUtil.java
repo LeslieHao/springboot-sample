@@ -1,14 +1,13 @@
 package com.hh.springboot.redis;
 
-import java.util.List;
-
 import org.junit.Test;
-
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 import redis.clients.jedis.ZParams;
 import redis.clients.jedis.exceptions.JedisDataException;
+
+import java.util.List;
 
 /**
  * @author HaoHao
@@ -46,6 +45,8 @@ public class RedisUtil {
     public static void remove(String key) {
         jedis.del(key);
     }
+
+    //***************************** String start *********************************************8
 
     /**
      * String 自增1
@@ -91,6 +92,30 @@ public class RedisUtil {
     public static void watch() {
 //        jedis.watch()
     }
+
+    @Test
+    public void getRange(){
+        // 获取字符串的指定范围
+        String v = jedis.getrange("k1", 0, 1);
+        jedis.setrange("k1", 0, "000");
+    }
+    @Test
+    public void setRange(){
+        // 从offset 开始替换
+        // 返回被修改后的字符串长度
+        Long k1 = jedis.setrange("k1", 1, "2222");
+
+        System.out.println(k1);
+    }
+
+    //***************************** String end *********************************************8
+
+
+    //***************************** List start *********************************************8
+
+
+
+
 
     @Test
     public void zInterStore() {

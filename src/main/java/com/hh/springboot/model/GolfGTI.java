@@ -12,6 +12,11 @@ public class GolfGTI {
 
     private String engine;
 
+    @Override
+    public String toString() {
+        return JSON.toJSONString(this);
+    }
+
     public String getName() {
         return name;
     }
@@ -26,10 +31,5 @@ public class GolfGTI {
 
     public void setEngine(String engine) {
         this.engine = engine;
-    }
-
-    @Override
-    public String toString() {
-        return JSON.toJSONString(this);
     }
 }

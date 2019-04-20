@@ -7,6 +7,7 @@ spring:
     static-path-pattern: /*
   resources:
     static-locations: classpath:/static/
+  # redis
   redis:
     host: 127.0.0.1
     port: 6379
@@ -16,6 +17,18 @@ spring:
         max-active: 8
         min-idle: 8
     timeout: 3600s
+    # 数据源
+  datasource:
+    master:
+      url: jdbc:mysql://localhost:3306/springboot_sample?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
+      username: root
+      password: 123456789
+      driverClass: com.mysql.jdbc.Driver
+    slave:
+      url: jdbc:mysql://localhost:3306/springboot_sample_slave?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
+      username: root
+      password: 123456789
+      driverClass: com.mysql.jdbc.Driver
 
 # 系统配置
 m:

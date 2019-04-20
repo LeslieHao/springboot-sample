@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -55,6 +56,14 @@ public class TestAction {
         response.put("data", animals);
         return response;
     }
+    @RequestMapping(value = "test/{a}/{b}/{c}")
+    void getAnimal(@PathVariable(value = "a",required=false ) String pa,
+                   @PathVariable(value = "b",required=false ) String pb,
+                   @PathVariable(value = "c",required=false ) String pc) {
+        System.out.println(pa + pb + pc);
+    }
+
+
 
     static class Animal {
 
