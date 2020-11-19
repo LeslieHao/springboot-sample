@@ -21,7 +21,7 @@ import javax.sql.DataSource;
  * @date 2019/3/27下午5:33
  */
 
-@Configuration
+//@Configuration
 // 指定扫描哪个包的mapper
 @MapperScan(basePackages = "com.hh.springboot.mapper.slave", sqlSessionFactoryRef = "slaveSqlSessionFactory")
 public class SlaveDataSourceConfig {

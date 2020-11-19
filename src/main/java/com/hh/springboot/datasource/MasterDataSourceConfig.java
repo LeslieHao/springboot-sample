@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
@@ -21,7 +20,7 @@ import javax.sql.DataSource;
  * @date 2019/3/27下午5:33
  */
 
-@Configuration
+//@Configuration
 // 指定扫描哪个包的mapper
 @MapperScan(basePackages = "com.hh.springboot.mapper.master", sqlSessionFactoryRef = "masterSqlSessionFactory")
 public class MasterDataSourceConfig {

@@ -23,7 +23,7 @@ public class LogAspect {
      * 地三个 * 代表所有方法
      * 最后一个.. 代表所有参数v
      */
-    @Pointcut("execution(* com.hh.springboot.controller..*.*(..))")
+    @Pointcut("execution(* com.hh.springboot.action..*.*(..))")
 //    @Pointcut("@annotation(com.yeepay.g3.jrhz.cashier.aop.RsaDecrypt)")
     public void controllerAspectj() {
     }
